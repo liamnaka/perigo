@@ -1,0 +1,758 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C2E32B01E5FCA1A0059E169 /* queue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E32AF1E5FCA1A0059E169 /* queue.mm */; };
+		0C3468871EA7242600A8E162 /* loading.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0C3468861EA7242600A8E162 /* loading.wav */; };
+		0C35066C1E5CE00500643C99 /* perigo_mapped.pb in Resources */ = {isa = PBXBuildFile; fileRef = 0C35066B1E5CDEC200643C99 /* perigo_mapped.pb */; };
+		0C568AF31E219584004CE94B /* vision.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C568AF21E219584004CE94B /* vision.mm */; };
+		0C66E74D1E527EAE00738EDB /* topn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E74C1E527EAE00738EDB /* topn.mm */; };
+		0CC6071A1EBE790700CB0A8A /* ImageGalleryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607151EBE790700CB0A8A /* ImageGalleryLayout.swift */; };
+		0CC6071B1EBE790700CB0A8A /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607161EBE790700CB0A8A /* ImageGalleryView.swift */; };
+		0CC6071C1EBE790700CB0A8A /* ImageGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607171EBE790700CB0A8A /* ImageGalleryViewCell.swift */; };
+		0CC6071D1EBE790700CB0A8A /* ImageGalleryViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607181EBE790700CB0A8A /* ImageGalleryViewDataSource.swift */; };
+		0CC6071E1EBE790700CB0A8A /* VideoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607191EBE790700CB0A8A /* VideoInfoView.swift */; };
+		0CC607211EBE794B00CB0A8A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607201EBE794B00CB0A8A /* Helper.swift */; };
+		0CC607231EBE797E00CB0A8A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607221EBE797E00CB0A8A /* Configuration.swift */; };
+		0CC607251EBE7A5A00CB0A8A /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607241EBE7A5A00CB0A8A /* AssetManager.swift */; };
+		0CC607271EBE7A9000CB0A8A /* ImageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607261EBE7A9000CB0A8A /* ImageStack.swift */; };
+		0CC607291EBE7D2500CB0A8A /* ConstraintsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607281EBE7D2500CB0A8A /* ConstraintsSetup.swift */; };
+		0CC6072D1EBE838B00CB0A8A /* BottomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6072A1EBE838B00CB0A8A /* BottomContainerView.swift */; };
+		0CC6072E1EBE838B00CB0A8A /* ButtonPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6072B1EBE838B00CB0A8A /* ButtonPicker.swift */; };
+		0CC6072F1EBE838B00CB0A8A /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6072C1EBE838B00CB0A8A /* StackView.swift */; };
+		0CD9042B1E5018D400589BD7 /* vocabulary.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9042A1E5018D300589BD7 /* vocabulary.mm */; };
+		0CD9042E1E5018FE00589BD7 /* caption.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9042D1E5018FE00589BD7 /* caption.mm */; };
+		0CE292A51E1F75BA00D5A1A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE292A41E1F75BA00D5A1A7 /* AppDelegate.swift */; };
+		0CE292A71E1F75BA00D5A1A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE292A61E1F75BA00D5A1A7 /* ViewController.swift */; };
+		0CE292AA1E1F75BA00D5A1A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE292A81E1F75BA00D5A1A7 /* Main.storyboard */; };
+		0CE292AC1E1F75BA00D5A1A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE292AB1E1F75BA00D5A1A7 /* Assets.xcassets */; };
+		0CE292AF1E1F75BA00D5A1A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE292AD1E1F75BA00D5A1A7 /* LaunchScreen.storyboard */; };
+		0CE292BA1E1F75BA00D5A1A7 /* PerigoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE292B91E1F75BA00D5A1A7 /* PerigoTests.swift */; };
+		0CE292C51E1F75BA00D5A1A7 /* PerigoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE292C41E1F75BA00D5A1A7 /* PerigoUITests.swift */; };
+		0CE292D41E1F76E100D5A1A7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE292D31E1F76E100D5A1A7 /* Accelerate.framework */; };
+		0CE292D61E1F76F000D5A1A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE292D51E1F76F000D5A1A7 /* Foundation.framework */; };
+		0CE292DA1E1F770500D5A1A7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE292D91E1F770500D5A1A7 /* AVFoundation.framework */; };
+		0CE292E81E1F780C00D5A1A7 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0CE292E61E1F780C00D5A1A7 /* words.txt */; };
+		0CE292F41E1F81E200D5A1A7 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE292F21E1F81E200D5A1A7 /* libprotobuf-lite.a */; };
+		0CE292F51E1F81E200D5A1A7 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE292F31E1F81E200D5A1A7 /* libprotobuf.a */; };
+		0CE292FE1E1F8E2700D5A1A7 /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CE292FD1E1F8E2700D5A1A7 /* tensorflow_utils.mm */; };
+		0CE293001E1F91C900D5A1A7 /* beam.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CE292FF1E1F91C900D5A1A7 /* beam.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CE292B61E1F75BA00D5A1A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CE292991E1F75BA00D5A1A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CE292A01E1F75BA00D5A1A7;
+			remoteInfo = seemer;
+		};
+		0CE292C11E1F75BA00D5A1A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CE292991E1F75BA00D5A1A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CE292A01E1F75BA00D5A1A7;
+			remoteInfo = seemer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C2E32AE1E5FCA1A0059E169 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		0C2E32AF1E5FCA1A0059E169 /* queue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = queue.mm; sourceTree = "<group>"; };
+		0C3468861EA7242600A8E162 /* loading.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = loading.wav; path = data/loading.wav; sourceTree = "<group>"; };
+		0C35066B1E5CDEC200643C99 /* perigo_mapped.pb */ = {isa = PBXFileReference; lastKnownFileType = file; name = perigo_mapped.pb; path = data/perigo_mapped.pb; sourceTree = "<group>"; };
+		0C568AF11E219584004CE94B /* vision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vision.h; sourceTree = "<group>"; };
+		0C568AF21E219584004CE94B /* vision.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = vision.mm; sourceTree = "<group>"; };
+		0C66E74B1E527EAE00738EDB /* topn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topn.h; sourceTree = "<group>"; };
+		0C66E74C1E527EAE00738EDB /* topn.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = topn.mm; sourceTree = "<group>"; };
+		0CC607151EBE790700CB0A8A /* ImageGalleryLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGalleryLayout.swift; path = ImageGallery/ImageGalleryLayout.swift; sourceTree = "<group>"; };
+		0CC607161EBE790700CB0A8A /* ImageGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGalleryView.swift; path = ImageGallery/ImageGalleryView.swift; sourceTree = "<group>"; };
+		0CC607171EBE790700CB0A8A /* ImageGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGalleryViewCell.swift; path = ImageGallery/ImageGalleryViewCell.swift; sourceTree = "<group>"; };
+		0CC607181EBE790700CB0A8A /* ImageGalleryViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGalleryViewDataSource.swift; path = ImageGallery/ImageGalleryViewDataSource.swift; sourceTree = "<group>"; };
+		0CC607191EBE790700CB0A8A /* VideoInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoInfoView.swift; path = ImageGallery/VideoInfoView.swift; sourceTree = "<group>"; };
+		0CC607201EBE794B00CB0A8A /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = ImageGallery/Helper.swift; sourceTree = "<group>"; };
+		0CC607221EBE797E00CB0A8A /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = ImageGallery/Configuration.swift; sourceTree = "<group>"; };
+		0CC607241EBE7A5A00CB0A8A /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetManager.swift; path = ImageGallery/AssetManager.swift; sourceTree = "<group>"; };
+		0CC607261EBE7A9000CB0A8A /* ImageStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageStack.swift; path = ImageGallery/ImageStack.swift; sourceTree = "<group>"; };
+		0CC607281EBE7D2500CB0A8A /* ConstraintsSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintsSetup.swift; path = ImageGallery/ConstraintsSetup.swift; sourceTree = "<group>"; };
+		0CC6072A1EBE838B00CB0A8A /* BottomContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomContainerView.swift; path = ImageGallery/BottomContainerView.swift; sourceTree = "<group>"; };
+		0CC6072B1EBE838B00CB0A8A /* ButtonPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonPicker.swift; path = ImageGallery/ButtonPicker.swift; sourceTree = "<group>"; };
+		0CC6072C1EBE838B00CB0A8A /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackView.swift; path = ImageGallery/StackView.swift; sourceTree = "<group>"; };
+		0CD904291E5018D300589BD7 /* vocabulary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vocabulary.h; sourceTree = "<group>"; };
+		0CD9042A1E5018D300589BD7 /* vocabulary.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = vocabulary.mm; sourceTree = "<group>"; };
+		0CD9042C1E5018FE00589BD7 /* caption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caption.h; sourceTree = "<group>"; };
+		0CD9042D1E5018FE00589BD7 /* caption.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = caption.mm; sourceTree = "<group>"; };
+		0CE292A11E1F75BA00D5A1A7 /* Perigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE292A41E1F75BA00D5A1A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0CE292A61E1F75BA00D5A1A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CE292A91E1F75BA00D5A1A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0CE292AB1E1F75BA00D5A1A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CE292AE1E1F75BA00D5A1A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0CE292B01E1F75BA00D5A1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CE292B51E1F75BA00D5A1A7 /* PerigoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerigoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE292B91E1F75BA00D5A1A7 /* PerigoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerigoTests.swift; sourceTree = "<group>"; };
+		0CE292BB1E1F75BA00D5A1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CE292C01E1F75BA00D5A1A7 /* PerigoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerigoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE292C41E1F75BA00D5A1A7 /* PerigoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerigoUITests.swift; sourceTree = "<group>"; };
+		0CE292C61E1F75BA00D5A1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CE292D31E1F76E100D5A1A7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0CE292D51E1F76F000D5A1A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0CE292D91E1F770500D5A1A7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0CE292E61E1F780C00D5A1A7 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = words.txt; path = data/words.txt; sourceTree = "<group>"; };
+		0CE292F01E1F819500D5A1A7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0CE292F21E1F81E200D5A1A7 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		0CE292F31E1F81E200D5A1A7 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
+		0CE292FB1E1F8E2700D5A1A7 /* Perigo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Perigo-Bridging-Header.h"; sourceTree = "<group>"; };
+		0CE292FC1E1F8E2700D5A1A7 /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
+		0CE292FD1E1F8E2700D5A1A7 /* tensorflow_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensorflow_utils.mm; sourceTree = "<group>"; };
+		0CE292FF1E1F91C900D5A1A7 /* beam.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = beam.mm; sourceTree = "<group>"; };
+		0CE293011E1F92A500D5A1A7 /* beam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beam.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CE2929E1E1F75BA00D5A1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE292F41E1F81E200D5A1A7 /* libprotobuf-lite.a in Frameworks */,
+				0CE292F51E1F81E200D5A1A7 /* libprotobuf.a in Frameworks */,
+				0CE292DA1E1F770500D5A1A7 /* AVFoundation.framework in Frameworks */,
+				0CE292D61E1F76F000D5A1A7 /* Foundation.framework in Frameworks */,
+				0CE292D41E1F76E100D5A1A7 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CE292B21E1F75BA00D5A1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CE292BD1E1F75BA00D5A1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C9CE77F1E50B88800AD3B67 /* Beam */ = {
+			isa = PBXGroup;
+			children = (
+				0CD9042C1E5018FE00589BD7 /* caption.h */,
+				0CD9042D1E5018FE00589BD7 /* caption.mm */,
+				0C66E74B1E527EAE00738EDB /* topn.h */,
+				0C66E74C1E527EAE00738EDB /* topn.mm */,
+				0CD904291E5018D300589BD7 /* vocabulary.h */,
+				0CD9042A1E5018D300589BD7 /* vocabulary.mm */,
+				0C2E32AE1E5FCA1A0059E169 /* queue.h */,
+				0C2E32AF1E5FCA1A0059E169 /* queue.mm */,
+				0CE292FC1E1F8E2700D5A1A7 /* tensorflow_utils.h */,
+				0CE292FD1E1F8E2700D5A1A7 /* tensorflow_utils.mm */,
+			);
+			name = Beam;
+			sourceTree = "<group>";
+		};
+		0CC6071F1EBE790E00CB0A8A /* Image Picker */ = {
+			isa = PBXGroup;
+			children = (
+				0CC607241EBE7A5A00CB0A8A /* AssetManager.swift */,
+				0CC607221EBE797E00CB0A8A /* Configuration.swift */,
+				0CC607151EBE790700CB0A8A /* ImageGalleryLayout.swift */,
+				0CC607161EBE790700CB0A8A /* ImageGalleryView.swift */,
+				0CC607171EBE790700CB0A8A /* ImageGalleryViewCell.swift */,
+				0CC607181EBE790700CB0A8A /* ImageGalleryViewDataSource.swift */,
+				0CC607261EBE7A9000CB0A8A /* ImageStack.swift */,
+				0CC607191EBE790700CB0A8A /* VideoInfoView.swift */,
+				0CC607201EBE794B00CB0A8A /* Helper.swift */,
+				0CC607281EBE7D2500CB0A8A /* ConstraintsSetup.swift */,
+				0CC6072A1EBE838B00CB0A8A /* BottomContainerView.swift */,
+				0CC6072B1EBE838B00CB0A8A /* ButtonPicker.swift */,
+				0CC6072C1EBE838B00CB0A8A /* StackView.swift */,
+			);
+			name = "Image Picker";
+			sourceTree = "<group>";
+		};
+		0CE292981E1F75BA00D5A1A7 = {
+			isa = PBXGroup;
+			children = (
+				0CE292A31E1F75BA00D5A1A7 /* Perigo */,
+				0CE292B81E1F75BA00D5A1A7 /* PerigoTests */,
+				0CE292A21E1F75BA00D5A1A7 /* Products */,
+				0CE292D21E1F76E100D5A1A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0CE292A21E1F75BA00D5A1A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CE292A11E1F75BA00D5A1A7 /* Perigo.app */,
+				0CE292B51E1F75BA00D5A1A7 /* PerigoTests.xctest */,
+				0CE292C01E1F75BA00D5A1A7 /* PerigoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CE292A31E1F75BA00D5A1A7 /* Perigo */ = {
+			isa = PBXGroup;
+			children = (
+				0CE292A41E1F75BA00D5A1A7 /* AppDelegate.swift */,
+				0CE292A61E1F75BA00D5A1A7 /* ViewController.swift */,
+				0CE292A81E1F75BA00D5A1A7 /* Main.storyboard */,
+				0CE293011E1F92A500D5A1A7 /* beam.h */,
+				0CE292FF1E1F91C900D5A1A7 /* beam.mm */,
+				0CC6071F1EBE790E00CB0A8A /* Image Picker */,
+				0C9CE77F1E50B88800AD3B67 /* Beam */,
+				0C568AF11E219584004CE94B /* vision.h */,
+				0C568AF21E219584004CE94B /* vision.mm */,
+				0CE292E91E1F781700D5A1A7 /* Network */,
+				0CE292AB1E1F75BA00D5A1A7 /* Assets.xcassets */,
+				0CE292AD1E1F75BA00D5A1A7 /* LaunchScreen.storyboard */,
+				0CE292C31E1F75BA00D5A1A7 /* PerigoUITests */,
+				0CE292B01E1F75BA00D5A1A7 /* Info.plist */,
+				0CE292FB1E1F8E2700D5A1A7 /* Perigo-Bridging-Header.h */,
+			);
+			path = Perigo;
+			sourceTree = "<group>";
+		};
+		0CE292B81E1F75BA00D5A1A7 /* PerigoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CE292B91E1F75BA00D5A1A7 /* PerigoTests.swift */,
+				0CE292BB1E1F75BA00D5A1A7 /* Info.plist */,
+			);
+			path = PerigoTests;
+			sourceTree = "<group>";
+		};
+		0CE292C31E1F75BA00D5A1A7 /* PerigoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0CE292C41E1F75BA00D5A1A7 /* PerigoUITests.swift */,
+				0CE292C61E1F75BA00D5A1A7 /* Info.plist */,
+			);
+			path = PerigoUITests;
+			sourceTree = SOURCE_ROOT;
+		};
+		0CE292D21E1F76E100D5A1A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CE292F21E1F81E200D5A1A7 /* libprotobuf-lite.a */,
+				0CE292F31E1F81E200D5A1A7 /* libprotobuf.a */,
+				0CE292F01E1F819500D5A1A7 /* AssetsLibrary.framework */,
+				0CE292D91E1F770500D5A1A7 /* AVFoundation.framework */,
+				0CE292D51E1F76F000D5A1A7 /* Foundation.framework */,
+				0CE292D31E1F76E100D5A1A7 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CE292E91E1F781700D5A1A7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0C35066B1E5CDEC200643C99 /* perigo_mapped.pb */,
+				0CE292E61E1F780C00D5A1A7 /* words.txt */,
+				0C3468861EA7242600A8E162 /* loading.wav */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CE292A01E1F75BA00D5A1A7 /* Perigo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CE292C91E1F75BA00D5A1A7 /* Build configuration list for PBXNativeTarget "Perigo" */;
+			buildPhases = (
+				0CE2929D1E1F75BA00D5A1A7 /* Sources */,
+				0CE2929E1E1F75BA00D5A1A7 /* Frameworks */,
+				0CE2929F1E1F75BA00D5A1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Perigo;
+			productName = seemer;
+			productReference = 0CE292A11E1F75BA00D5A1A7 /* Perigo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0CE292B41E1F75BA00D5A1A7 /* PerigoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CE292CC1E1F75BA00D5A1A7 /* Build configuration list for PBXNativeTarget "PerigoTests" */;
+			buildPhases = (
+				0CE292B11E1F75BA00D5A1A7 /* Sources */,
+				0CE292B21E1F75BA00D5A1A7 /* Frameworks */,
+				0CE292B31E1F75BA00D5A1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CE292B71E1F75BA00D5A1A7 /* PBXTargetDependency */,
+			);
+			name = PerigoTests;
+			productName = seemerTests;
+			productReference = 0CE292B51E1F75BA00D5A1A7 /* PerigoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0CE292BF1E1F75BA00D5A1A7 /* PerigoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CE292CF1E1F75BA00D5A1A7 /* Build configuration list for PBXNativeTarget "PerigoUITests" */;
+			buildPhases = (
+				0CE292BC1E1F75BA00D5A1A7 /* Sources */,
+				0CE292BD1E1F75BA00D5A1A7 /* Frameworks */,
+				0CE292BE1E1F75BA00D5A1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CE292C21E1F75BA00D5A1A7 /* PBXTargetDependency */,
+			);
+			name = PerigoUITests;
+			productName = seemerUITests;
+			productReference = 0CE292C01E1F75BA00D5A1A7 /* PerigoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CE292991E1F75BA00D5A1A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Perigo;
+				TargetAttributes = {
+					0CE292A01E1F75BA00D5A1A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q6Q9Q8CYJ4;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					0CE292B41E1F75BA00D5A1A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q6Q9Q8CYJ4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0CE292A01E1F75BA00D5A1A7;
+					};
+					0CE292BF1E1F75BA00D5A1A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q6Q9Q8CYJ4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0CE292A01E1F75BA00D5A1A7;
+					};
+				};
+			};
+			buildConfigurationList = 0CE2929C1E1F75BA00D5A1A7 /* Build configuration list for PBXProject "Perigo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0CE292981E1F75BA00D5A1A7;
+			productRefGroup = 0CE292A21E1F75BA00D5A1A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CE292A01E1F75BA00D5A1A7 /* Perigo */,
+				0CE292B41E1F75BA00D5A1A7 /* PerigoTests */,
+				0CE292BF1E1F75BA00D5A1A7 /* PerigoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CE2929F1E1F75BA00D5A1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C35066C1E5CE00500643C99 /* perigo_mapped.pb in Resources */,
+				0CE292AF1E1F75BA00D5A1A7 /* LaunchScreen.storyboard in Resources */,
+				0CE292AC1E1F75BA00D5A1A7 /* Assets.xcassets in Resources */,
+				0C3468871EA7242600A8E162 /* loading.wav in Resources */,
+				0CE292E81E1F780C00D5A1A7 /* words.txt in Resources */,
+				0CE292AA1E1F75BA00D5A1A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CE292B31E1F75BA00D5A1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CE292BE1E1F75BA00D5A1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CE2929D1E1F75BA00D5A1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CC6071D1EBE790700CB0A8A /* ImageGalleryViewDataSource.swift in Sources */,
+				0CC6072F1EBE838B00CB0A8A /* StackView.swift in Sources */,
+				0C2E32B01E5FCA1A0059E169 /* queue.mm in Sources */,
+				0CC607211EBE794B00CB0A8A /* Helper.swift in Sources */,
+				0C66E74D1E527EAE00738EDB /* topn.mm in Sources */,
+				0CD9042E1E5018FE00589BD7 /* caption.mm in Sources */,
+				0CC607251EBE7A5A00CB0A8A /* AssetManager.swift in Sources */,
+				0CE292FE1E1F8E2700D5A1A7 /* tensorflow_utils.mm in Sources */,
+				0CC6072D1EBE838B00CB0A8A /* BottomContainerView.swift in Sources */,
+				0CC607231EBE797E00CB0A8A /* Configuration.swift in Sources */,
+				0CC6071B1EBE790700CB0A8A /* ImageGalleryView.swift in Sources */,
+				0CC6071E1EBE790700CB0A8A /* VideoInfoView.swift in Sources */,
+				0CC607291EBE7D2500CB0A8A /* ConstraintsSetup.swift in Sources */,
+				0CC6071A1EBE790700CB0A8A /* ImageGalleryLayout.swift in Sources */,
+				0CD9042B1E5018D400589BD7 /* vocabulary.mm in Sources */,
+				0CC6071C1EBE790700CB0A8A /* ImageGalleryViewCell.swift in Sources */,
+				0CE293001E1F91C900D5A1A7 /* beam.mm in Sources */,
+				0CC607271EBE7A9000CB0A8A /* ImageStack.swift in Sources */,
+				0CE292A71E1F75BA00D5A1A7 /* ViewController.swift in Sources */,
+				0CE292A51E1F75BA00D5A1A7 /* AppDelegate.swift in Sources */,
+				0C568AF31E219584004CE94B /* vision.mm in Sources */,
+				0CC6072E1EBE838B00CB0A8A /* ButtonPicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CE292B11E1F75BA00D5A1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE292BA1E1F75BA00D5A1A7 /* PerigoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CE292BC1E1F75BA00D5A1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE292C51E1F75BA00D5A1A7 /* PerigoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CE292B71E1F75BA00D5A1A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CE292A01E1F75BA00D5A1A7 /* Perigo */;
+			targetProxy = 0CE292B61E1F75BA00D5A1A7 /* PBXContainerItemProxy */;
+		};
+		0CE292C21E1F75BA00D5A1A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CE292A01E1F75BA00D5A1A7 /* Perigo */;
+			targetProxy = 0CE292C11E1F75BA00D5A1A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CE292A81E1F75BA00D5A1A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CE292A91E1F75BA00D5A1A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0CE292AD1E1F75BA00D5A1A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CE292AE1E1F75BA00D5A1A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0CE292C71E1F75BA00D5A1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0CE292C81E1F75BA00D5A1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0CE292CA1E1F75BA00D5A1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Q6Q9Q8CYJ4;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/proto",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/downloads/eigen",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/downloads",
+					"$(SRCROOT)/../tensorflow",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src/",
+				);
+				INFOPLIST_FILE = Perigo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/lib",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = perigo.seemer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Perigo/Perigo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0CE292CB1E1F75BA00D5A1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Q6Q9Q8CYJ4;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/proto",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/downloads/eigen",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/downloads",
+					"$(SRCROOT)/../tensorflow",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src/",
+				);
+				INFOPLIST_FILE = Perigo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/lib",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = perigo.seemer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Perigo/Perigo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0CE292CD1E1F75BA00D5A1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q6Q9Q8CYJ4;
+				INFOPLIST_FILE = PerigoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = perigo.seemerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Perigo.app/Perigo";
+			};
+			name = Debug;
+		};
+		0CE292CE1E1F75BA00D5A1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q6Q9Q8CYJ4;
+				INFOPLIST_FILE = PerigoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = perigo.seemerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Perigo.app/Perigo";
+			};
+			name = Release;
+		};
+		0CE292D01E1F75BA00D5A1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Q6Q9Q8CYJ4;
+				INFOPLIST_FILE = PerigoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = perigo.seemerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = seemer;
+			};
+			name = Debug;
+		};
+		0CE292D11E1F75BA00D5A1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Q6Q9Q8CYJ4;
+				INFOPLIST_FILE = PerigoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = perigo.seemerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = seemer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CE2929C1E1F75BA00D5A1A7 /* Build configuration list for PBXProject "Perigo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CE292C71E1F75BA00D5A1A7 /* Debug */,
+				0CE292C81E1F75BA00D5A1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CE292C91E1F75BA00D5A1A7 /* Build configuration list for PBXNativeTarget "Perigo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CE292CA1E1F75BA00D5A1A7 /* Debug */,
+				0CE292CB1E1F75BA00D5A1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CE292CC1E1F75BA00D5A1A7 /* Build configuration list for PBXNativeTarget "PerigoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CE292CD1E1F75BA00D5A1A7 /* Debug */,
+				0CE292CE1E1F75BA00D5A1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CE292CF1E1F75BA00D5A1A7 /* Build configuration list for PBXNativeTarget "PerigoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CE292D01E1F75BA00D5A1A7 /* Debug */,
+				0CE292D11E1F75BA00D5A1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CE292991E1F75BA00D5A1A7 /* Project object */;
+}
