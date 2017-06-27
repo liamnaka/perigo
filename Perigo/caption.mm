@@ -14,7 +14,7 @@
 
 - (id)init
 {
-    return [self initWithSentence:[NSMutableArray new] withState:tensorflow::Tensor() withLogprob:0.0 withScore:0.0];
+    return [self initWithSentence:[[NSMutableArray alloc] init] withState:tensorflow::Tensor() withLogprob:0.0 withScore:0.0];
 }
 
 //Assuming length of vocab file is 11519 for testing, works with any length

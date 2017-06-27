@@ -17,6 +17,7 @@
 
 -(void)load_model;
 -(NSString*)beam_search:(UIImage*)image;
+-(NSArray*)coco_search:(UIImage*)image;
 
 
 @end

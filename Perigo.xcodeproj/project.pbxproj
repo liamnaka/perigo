@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0F7F7A1F00CE0C00065C58 /* Faces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F7F791F00CE0C00065C58 /* Faces.swift */; };
 		0C2E32B01E5FCA1A0059E169 /* queue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E32AF1E5FCA1A0059E169 /* queue.mm */; };
-		0C3468871EA7242600A8E162 /* loading.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0C3468861EA7242600A8E162 /* loading.wav */; };
 		0C35066C1E5CE00500643C99 /* perigo_mapped.pb in Resources */ = {isa = PBXBuildFile; fileRef = 0C35066B1E5CDEC200643C99 /* perigo_mapped.pb */; };
 		0C568AF31E219584004CE94B /* vision.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C568AF21E219584004CE94B /* vision.mm */; };
 		0C66E74D1E527EAE00738EDB /* topn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E74C1E527EAE00738EDB /* topn.mm */; };
+		0C85E6551EE6024B00CF3E4D /* Inception3Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85E6531EE6024B00CF3E4D /* Inception3Net.swift */; };
+		0C85E6561EE6024B00CF3E4D /* SlimMPSCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85E6541EE6024B00CF3E4D /* SlimMPSCNN.swift */; };
 		0CC6071A1EBE790700CB0A8A /* ImageGalleryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607151EBE790700CB0A8A /* ImageGalleryLayout.swift */; };
 		0CC6071B1EBE790700CB0A8A /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607161EBE790700CB0A8A /* ImageGalleryView.swift */; };
 		0CC6071C1EBE790700CB0A8A /* ImageGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607171EBE790700CB0A8A /* ImageGalleryViewCell.swift */; };
@@ -22,7 +24,6 @@
 		0CC607251EBE7A5A00CB0A8A /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607241EBE7A5A00CB0A8A /* AssetManager.swift */; };
 		0CC607271EBE7A9000CB0A8A /* ImageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607261EBE7A9000CB0A8A /* ImageStack.swift */; };
 		0CC607291EBE7D2500CB0A8A /* ConstraintsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC607281EBE7D2500CB0A8A /* ConstraintsSetup.swift */; };
-		0CC6072D1EBE838B00CB0A8A /* BottomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6072A1EBE838B00CB0A8A /* BottomContainerView.swift */; };
 		0CC6072E1EBE838B00CB0A8A /* ButtonPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6072B1EBE838B00CB0A8A /* ButtonPicker.swift */; };
 		0CC6072F1EBE838B00CB0A8A /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6072C1EBE838B00CB0A8A /* StackView.swift */; };
 		0CD9042B1E5018D400589BD7 /* vocabulary.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9042A1E5018D300589BD7 /* vocabulary.mm */; };
@@ -42,6 +43,16 @@
 		0CE292F51E1F81E200D5A1A7 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE292F31E1F81E200D5A1A7 /* libprotobuf.a */; };
 		0CE292FE1E1F8E2700D5A1A7 /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CE292FD1E1F8E2700D5A1A7 /* tensorflow_utils.mm */; };
 		0CE293001E1F91C900D5A1A7 /* beam.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CE292FF1E1F91C900D5A1A7 /* beam.mm */; };
+		0CE6E4BC1F005607007A703B /* coco.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6E4BB1F005607007A703B /* coco.mm */; };
+		0CE6E4BE1F0058D1007A703B /* CocoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6E4BD1F0058D1007A703B /* CocoHelper.swift */; };
+		0CEF9A7E1F01C5B600644B77 /* Activation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A771F01C5B600644B77 /* Activation.swift */; };
+		0CEF9A7F1F01C5B600644B77 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A781F01C5B600644B77 /* Cache.swift */; };
+		0CEF9A801F01C5B600644B77 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A791F01C5B600644B77 /* Dataset.swift */; };
+		0CEF9A811F01C5B600644B77 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A7A1F01C5B600644B77 /* Error.swift */; };
+		0CEF9A821F01C5B600644B77 /* NeuralNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A7B1F01C5B600644B77 /* NeuralNet.swift */; };
+		0CEF9A831F01C5B600644B77 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A7C1F01C5B600644B77 /* Storage.swift */; };
+		0CEF9A841F01C5B600644B77 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A7D1F01C5B600644B77 /* Structure.swift */; };
+		0CEF9A871F01C6AC00644B77 /* facenet.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A861F01C6AC00644B77 /* facenet.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,14 +73,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0F7F791F00CE0C00065C58 /* Faces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faces.swift; sourceTree = "<group>"; };
 		0C2E32AE1E5FCA1A0059E169 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 		0C2E32AF1E5FCA1A0059E169 /* queue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = queue.mm; sourceTree = "<group>"; };
-		0C3468861EA7242600A8E162 /* loading.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = loading.wav; path = data/loading.wav; sourceTree = "<group>"; };
 		0C35066B1E5CDEC200643C99 /* perigo_mapped.pb */ = {isa = PBXFileReference; lastKnownFileType = file; name = perigo_mapped.pb; path = data/perigo_mapped.pb; sourceTree = "<group>"; };
 		0C568AF11E219584004CE94B /* vision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vision.h; sourceTree = "<group>"; };
 		0C568AF21E219584004CE94B /* vision.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = vision.mm; sourceTree = "<group>"; };
 		0C66E74B1E527EAE00738EDB /* topn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topn.h; sourceTree = "<group>"; };
 		0C66E74C1E527EAE00738EDB /* topn.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = topn.mm; sourceTree = "<group>"; };
+		0C85E6531EE6024B00CF3E4D /* Inception3Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Inception3Net.swift; path = ImageNet/Inception3Net.swift; sourceTree = "<group>"; };
+		0C85E6541EE6024B00CF3E4D /* SlimMPSCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlimMPSCNN.swift; path = ImageNet/SlimMPSCNN.swift; sourceTree = "<group>"; };
 		0CC607151EBE790700CB0A8A /* ImageGalleryLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGalleryLayout.swift; path = ImageGallery/ImageGalleryLayout.swift; sourceTree = "<group>"; };
 		0CC607161EBE790700CB0A8A /* ImageGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGalleryView.swift; path = ImageGallery/ImageGalleryView.swift; sourceTree = "<group>"; };
 		0CC607171EBE790700CB0A8A /* ImageGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGalleryViewCell.swift; path = ImageGallery/ImageGalleryViewCell.swift; sourceTree = "<group>"; };
@@ -80,7 +93,6 @@
 		0CC607241EBE7A5A00CB0A8A /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetManager.swift; path = ImageGallery/AssetManager.swift; sourceTree = "<group>"; };
 		0CC607261EBE7A9000CB0A8A /* ImageStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageStack.swift; path = ImageGallery/ImageStack.swift; sourceTree = "<group>"; };
 		0CC607281EBE7D2500CB0A8A /* ConstraintsSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintsSetup.swift; path = ImageGallery/ConstraintsSetup.swift; sourceTree = "<group>"; };
-		0CC6072A1EBE838B00CB0A8A /* BottomContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomContainerView.swift; path = ImageGallery/BottomContainerView.swift; sourceTree = "<group>"; };
 		0CC6072B1EBE838B00CB0A8A /* ButtonPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonPicker.swift; path = ImageGallery/ButtonPicker.swift; sourceTree = "<group>"; };
 		0CC6072C1EBE838B00CB0A8A /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackView.swift; path = ImageGallery/StackView.swift; sourceTree = "<group>"; };
 		0CD904291E5018D300589BD7 /* vocabulary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vocabulary.h; sourceTree = "<group>"; };
@@ -103,7 +115,7 @@
 		0CE292D31E1F76E100D5A1A7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0CE292D51E1F76F000D5A1A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CE292D91E1F770500D5A1A7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0CE292E61E1F780C00D5A1A7 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = words.txt; path = data/words.txt; sourceTree = "<group>"; };
+		0CE292E61E1F780C00D5A1A7 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = words.txt; path = data/words.txt; sourceTree = "<group>"; wrapsLines = 0; };
 		0CE292F01E1F819500D5A1A7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		0CE292F21E1F81E200D5A1A7 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
 		0CE292F31E1F81E200D5A1A7 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
@@ -112,6 +124,18 @@
 		0CE292FD1E1F8E2700D5A1A7 /* tensorflow_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensorflow_utils.mm; sourceTree = "<group>"; };
 		0CE292FF1E1F91C900D5A1A7 /* beam.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = beam.mm; sourceTree = "<group>"; };
 		0CE293011E1F92A500D5A1A7 /* beam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beam.h; sourceTree = "<group>"; };
+		0CE6E4BA1F005607007A703B /* coco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coco.h; sourceTree = "<group>"; };
+		0CE6E4BB1F005607007A703B /* coco.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = coco.mm; sourceTree = "<group>"; };
+		0CE6E4BD1F0058D1007A703B /* CocoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoHelper.swift; sourceTree = "<group>"; };
+		0CEF9A771F01C5B600644B77 /* Activation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activation.swift; path = SwiftAI/Activation.swift; sourceTree = "<group>"; };
+		0CEF9A781F01C5B600644B77 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = SwiftAI/Cache.swift; sourceTree = "<group>"; };
+		0CEF9A791F01C5B600644B77 /* Dataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dataset.swift; path = SwiftAI/Dataset.swift; sourceTree = "<group>"; };
+		0CEF9A7A1F01C5B600644B77 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = SwiftAI/Error.swift; sourceTree = "<group>"; };
+		0CEF9A7B1F01C5B600644B77 /* NeuralNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeuralNet.swift; path = SwiftAI/NeuralNet.swift; sourceTree = "<group>"; };
+		0CEF9A7C1F01C5B600644B77 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = SwiftAI/Storage.swift; sourceTree = "<group>"; };
+		0CEF9A7D1F01C5B600644B77 /* Structure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Structure.swift; path = SwiftAI/Structure.swift; sourceTree = "<group>"; };
+		0CEF9A851F01C6AC00644B77 /* facenet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facenet.h; sourceTree = "<group>"; };
+		0CEF9A861F01C6AC00644B77 /* facenet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = facenet.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +168,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C85E4D51EE6021900CF3E4D /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Parameters;
+			sourceTree = "<group>";
+		};
+		0C85E6521EE6023000CF3E4D /* ImageNet */ = {
+			isa = PBXGroup;
+			children = (
+				0C85E6531EE6024B00CF3E4D /* Inception3Net.swift */,
+				0C85E6541EE6024B00CF3E4D /* SlimMPSCNN.swift */,
+				0C85E4D51EE6021900CF3E4D /* Parameters */,
+			);
+			name = ImageNet;
+			sourceTree = "<group>";
+		};
 		0C9CE77F1E50B88800AD3B67 /* Beam */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +215,6 @@
 				0CC607191EBE790700CB0A8A /* VideoInfoView.swift */,
 				0CC607201EBE794B00CB0A8A /* Helper.swift */,
 				0CC607281EBE7D2500CB0A8A /* ConstraintsSetup.swift */,
-				0CC6072A1EBE838B00CB0A8A /* BottomContainerView.swift */,
 				0CC6072B1EBE838B00CB0A8A /* ButtonPicker.swift */,
 				0CC6072C1EBE838B00CB0A8A /* StackView.swift */,
 			);
@@ -206,13 +246,21 @@
 			children = (
 				0CE292A41E1F75BA00D5A1A7 /* AppDelegate.swift */,
 				0CE292A61E1F75BA00D5A1A7 /* ViewController.swift */,
+				0C0F7F791F00CE0C00065C58 /* Faces.swift */,
+				0CE6E4BD1F0058D1007A703B /* CocoHelper.swift */,
 				0CE292A81E1F75BA00D5A1A7 /* Main.storyboard */,
 				0CE293011E1F92A500D5A1A7 /* beam.h */,
 				0CE292FF1E1F91C900D5A1A7 /* beam.mm */,
-				0CC6071F1EBE790E00CB0A8A /* Image Picker */,
+				0CEF9A761F01C5A000644B77 /* SwiftAI */,
+				0CE6E4BA1F005607007A703B /* coco.h */,
+				0CE6E4BB1F005607007A703B /* coco.mm */,
+				0CEF9A851F01C6AC00644B77 /* facenet.h */,
+				0CEF9A861F01C6AC00644B77 /* facenet.mm */,
 				0C9CE77F1E50B88800AD3B67 /* Beam */,
+				0CC6071F1EBE790E00CB0A8A /* Image Picker */,
 				0C568AF11E219584004CE94B /* vision.h */,
 				0C568AF21E219584004CE94B /* vision.mm */,
+				0C85E6521EE6023000CF3E4D /* ImageNet */,
 				0CE292E91E1F781700D5A1A7 /* Network */,
 				0CE292AB1E1F75BA00D5A1A7 /* Assets.xcassets */,
 				0CE292AD1E1F75BA00D5A1A7 /* LaunchScreen.storyboard */,
@@ -259,9 +307,22 @@
 			children = (
 				0C35066B1E5CDEC200643C99 /* perigo_mapped.pb */,
 				0CE292E61E1F780C00D5A1A7 /* words.txt */,
-				0C3468861EA7242600A8E162 /* loading.wav */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		0CEF9A761F01C5A000644B77 /* SwiftAI */ = {
+			isa = PBXGroup;
+			children = (
+				0CEF9A771F01C5B600644B77 /* Activation.swift */,
+				0CEF9A781F01C5B600644B77 /* Cache.swift */,
+				0CEF9A791F01C5B600644B77 /* Dataset.swift */,
+				0CEF9A7A1F01C5B600644B77 /* Error.swift */,
+				0CEF9A7B1F01C5B600644B77 /* NeuralNet.swift */,
+				0CEF9A7C1F01C5B600644B77 /* Storage.swift */,
+				0CEF9A7D1F01C5B600644B77 /* Structure.swift */,
+			);
+			name = SwiftAI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,7 +439,6 @@
 				0C35066C1E5CE00500643C99 /* perigo_mapped.pb in Resources */,
 				0CE292AF1E1F75BA00D5A1A7 /* LaunchScreen.storyboard in Resources */,
 				0CE292AC1E1F75BA00D5A1A7 /* Assets.xcassets in Resources */,
-				0C3468871EA7242600A8E162 /* loading.wav in Resources */,
 				0CE292E81E1F780C00D5A1A7 /* words.txt in Resources */,
 				0CE292AA1E1F75BA00D5A1A7 /* Main.storyboard in Resources */,
 			);
@@ -405,16 +465,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEF9A821F01C5B600644B77 /* NeuralNet.swift in Sources */,
 				0CC6071D1EBE790700CB0A8A /* ImageGalleryViewDataSource.swift in Sources */,
+				0CE6E4BE1F0058D1007A703B /* CocoHelper.swift in Sources */,
+				0C0F7F7A1F00CE0C00065C58 /* Faces.swift in Sources */,
 				0CC6072F1EBE838B00CB0A8A /* StackView.swift in Sources */,
 				0C2E32B01E5FCA1A0059E169 /* queue.mm in Sources */,
+				0CE6E4BC1F005607007A703B /* coco.mm in Sources */,
 				0CC607211EBE794B00CB0A8A /* Helper.swift in Sources */,
+				0CEF9A841F01C5B600644B77 /* Structure.swift in Sources */,
+				0CEF9A7E1F01C5B600644B77 /* Activation.swift in Sources */,
 				0C66E74D1E527EAE00738EDB /* topn.mm in Sources */,
 				0CD9042E1E5018FE00589BD7 /* caption.mm in Sources */,
 				0CC607251EBE7A5A00CB0A8A /* AssetManager.swift in Sources */,
 				0CE292FE1E1F8E2700D5A1A7 /* tensorflow_utils.mm in Sources */,
-				0CC6072D1EBE838B00CB0A8A /* BottomContainerView.swift in Sources */,
 				0CC607231EBE797E00CB0A8A /* Configuration.swift in Sources */,
+				0C85E6551EE6024B00CF3E4D /* Inception3Net.swift in Sources */,
+				0CEF9A871F01C6AC00644B77 /* facenet.mm in Sources */,
+				0CEF9A7F1F01C5B600644B77 /* Cache.swift in Sources */,
 				0CC6071B1EBE790700CB0A8A /* ImageGalleryView.swift in Sources */,
 				0CC6071E1EBE790700CB0A8A /* VideoInfoView.swift in Sources */,
 				0CC607291EBE7D2500CB0A8A /* ConstraintsSetup.swift in Sources */,
@@ -423,10 +491,14 @@
 				0CC6071C1EBE790700CB0A8A /* ImageGalleryViewCell.swift in Sources */,
 				0CE293001E1F91C900D5A1A7 /* beam.mm in Sources */,
 				0CC607271EBE7A9000CB0A8A /* ImageStack.swift in Sources */,
+				0CEF9A801F01C5B600644B77 /* Dataset.swift in Sources */,
 				0CE292A71E1F75BA00D5A1A7 /* ViewController.swift in Sources */,
 				0CE292A51E1F75BA00D5A1A7 /* AppDelegate.swift in Sources */,
 				0C568AF31E219584004CE94B /* vision.mm in Sources */,
 				0CC6072E1EBE838B00CB0A8A /* ButtonPicker.swift in Sources */,
+				0CEF9A831F01C5B600644B77 /* Storage.swift in Sources */,
+				0CEF9A811F01C5B600644B77 /* Error.swift in Sources */,
+				0C85E6561EE6024B00CF3E4D /* SlimMPSCNN.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +647,7 @@
 		0CE292CA1E1F75BA00D5A1A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
@@ -617,7 +689,7 @@
 		0CE292CB1E1F75BA00D5A1A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;

@@ -156,6 +156,7 @@ tensorflow::Status LoadModel(NSString* file_name, NSString* file_type,
   return tensorflow::Status::OK();
 }
 
+//Modified to reduce random freezing of inference
 tensorflow::Status LoadMemoryMappedModel(
     NSString* file_name, NSString* file_type,
     std::unique_ptr<tensorflow::Session>* session,
@@ -169,6 +170,7 @@ tensorflow::Status LoadMemoryMappedModel(
     LOG(ERROR) << "MMap failed with " << mmap_status.error_message();
     return mmap_status;
   }
+    
 
   tensorflow::GraphDef tensorflow_graph;
   tensorflow::Status load_graph_status = ReadBinaryProto(
@@ -188,7 +190,12 @@ tensorflow::Status LoadMemoryMappedModel(
   options.config.mutable_graph_options()
       ->mutable_optimizer_options()
       ->set_opt_level(::tensorflow::OptimizerOptions::L0);
+//MOD: Reduce Parellism - May have speed implications
+  options.config.set_inter_op_parallelism_threads(1);
+  options.config.set_intra_op_parallelism_threads(1);
   options.env = memmapped_env->get();
+    
+    
 
   tensorflow::Session* session_pointer = nullptr;
   tensorflow::Status session_status =

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,6 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchBG" translatesAutoresizingMaskIntoConstraints="NO" id="CtF-z9-pbQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perigo Sight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE8-UK-LPI">
                                 <rect key="frame" x="47" y="299.5" width="282.5" height="68.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
@@ -34,11 +37,15 @@
                         <color key="backgroundColor" red="1" green="0.18823529411764706" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tE8-UK-LPI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2WL-PU-pDh"/>
+                            <constraint firstItem="CtF-z9-pbQ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="5KI-AK-qtm"/>
                             <constraint firstItem="aQz-9L-uTu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8Ei-Fj-ccq"/>
                             <constraint firstItem="aQz-9L-uTu" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="BKO-Qd-lYI"/>
                             <constraint firstItem="aQz-9L-uTu" firstAttribute="top" secondItem="tE8-UK-LPI" secondAttribute="bottom" constant="20" id="RWD-ZF-oEN"/>
+                            <constraint firstItem="CtF-z9-pbQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="X2p-B2-Yr2"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="aQz-9L-uTu" secondAttribute="bottom" id="em2-fg-33t"/>
                             <constraint firstItem="tE8-UK-LPI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ght-L9-yco"/>
+                            <constraint firstItem="CtF-z9-pbQ" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="xH9-1s-5yQ"/>
+                            <constraint firstItem="CtF-z9-pbQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="yzc-I5-Crp"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -49,5 +56,6 @@
     </scenes>
     <resources>
         <image name="Launch" width="500" height="500"/>
+        <image name="LaunchBG" width="835" height="1500"/>
     </resources>
 </document>

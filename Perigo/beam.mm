@@ -60,6 +60,8 @@ vocabulary *vocab;
 
 - (void)load_model {
     
+    
+    
     //if (tf_session.get()){
         vocab = [[vocabulary alloc] initWithVocab:labels_file_name Type:labels_file_type];
         
@@ -97,8 +99,8 @@ vocabulary *vocab;
     int image_height;
     unsigned char *sourceStartAddr;
     
-    //Isolating square portion
-    if (fullHeight <= image_width) {
+    //Isolating square portion - 100 pixel leeway
+    if (fullHeight <= (image_width)) {
         image_height = fullHeight;
         sourceStartAddr = sourceBaseAddr;
     } else {
@@ -157,6 +159,7 @@ vocabulary *vocab;
         tensorflow::Status run_status = tf_session->Run(
                                                         {{input1, image_tensor}}, {output1}, {}, &initial_state);
         if (!run_status.ok()) {
+            NSLog(@"%@", @"Initial Inference Error");
             LOG(ERROR) << "Running model failed:" << run_status;
         } else {
             output = initial_state;
@@ -176,12 +179,16 @@ vocabulary *vocab;
     input_feed = inputs;
     tensorflow::Tensor state_feed(tensorflow::DT_FLOAT);
     state_feed = states;
+    
+    assert(input_feed.IsInitialized() == true);
+    assert(state_feed.IsInitialized() == true);
 
     if (tf_session.get()) {
         std::vector<tensorflow::Tensor> state_output;
         tensorflow::Status run_status = tf_session->Run(
                                                         {{input2, input_feed},{input3, state_feed}}, {output2,output3}, {}, &state_output);
         if (!run_status.ok()) {
+            NSLog(@"%@", @"Inference Error");
             LOG(ERROR) << "Running model failed:" << run_status;
         } else {
             output_feed = state_output;
@@ -198,6 +205,8 @@ vocabulary *vocab;
     CGImageRef imageRef = [image CGImage];
     
     tensorflow::Tensor image_tensor = [self image_to_tensor:[self pixelBufferFromCGImage:imageRef]];
+    
+    
 
     
     std::vector<tensorflow::Tensor> initial_state = [self feed_image:image_tensor];
@@ -205,11 +214,12 @@ vocabulary *vocab;
     
     //Crash Happening After Here
     
-    NSMutableArray* start_sentence = [NSMutableArray new];
+    NSMutableArray* start_sentence = [[NSMutableArray alloc] init];//Suspect 1
     [start_sentence addObject:[NSNumber numberWithInteger:vocab->start_id]];
 
 
     caption *initial_beam = [[caption alloc] initWithSentence:start_sentence withState:initial_state[0] withLogprob:0.0 withScore:0.0];
+    
 
 
     //Beam Size = 3
@@ -219,8 +229,12 @@ vocabulary *vocab;
 
     //Max Caption Length = 20
     for (int _ = 0; _ < max_caption_length; _++){
+        
+        //Suspect 2
         NSMutableArray<caption *> *partial_captions_list = [partial_captions extract:(false)];
-        [partial_captions reset];
+        //[partial_captions reset]; --Redundant
+        
+        assert(partial_captions_list.count > 0);
 
 
         tensorflow::Tensor input_feed(tensorflow::DT_INT64,
@@ -233,13 +247,15 @@ vocabulary *vocab;
 
 
         for (int i = 0; i < [partial_captions_list count]; i++){ //Assigning values to feed tensors
-            NSMutableArray *sen = partial_captions_list[i]->sentence;//Retrieves caption
-            input_map(i) = [sen[[sen count]-1] intValue]; //Assigns the ID of the last word to input_feed
+            //NSMutableArray *sen = partial_captions_list[i]->sentence;//Retrieves caption
+            
+            //assert(sen != nil);
+            input_map(i) = [[partial_captions_list[i]->sentence lastObject] intValue]; //Assigns the ID of the last word to input_feed
 
             tensorflow::Tensor temp_state = partial_captions_list[i]->state;//Retrieves state
             auto temp_state_map = temp_state.tensor<float, 2>();
             for (int j = 0; j < 1024; j++){
-                state_map(i,j) = temp_state_map(0,j);
+                state_map(i,j) = float(temp_state_map(0,j));
             }
         }
 
@@ -247,8 +263,10 @@ vocabulary *vocab;
         
         NSDate *start = [NSDate date];
         
-        
+        //Point #2 of crash
         std::vector<tensorflow::Tensor> inference = [self run_inference:input_feed withStates:state_feed];
+        
+        
         tensorflow::Tensor softmax = inference[0];
         tensorflow::Tensor new_states = inference[1];
 
@@ -271,6 +289,8 @@ vocabulary *vocab;
             for (int j = 0; j < 1024; j++){
                 state_mapped(0,j) = new_states_mapped(i,j);
             }
+            
+            
 
             //Sorting on just C++ went from 0.15/2.4total sort time to 0.01/0.22total sort time
             //A whole 2+ seconds quicker making it %40+ Faster overall : AWESOME!
@@ -281,7 +301,6 @@ vocabulary *vocab;
             auto comp = []( const array<float, 2>& a, const array<float, 2>& b )
             { return a[1] > b[1]; };
             
-    
             sort(probs,probs+12000,comp);
             
 
@@ -322,6 +341,8 @@ vocabulary *vocab;
         
     }//End of beam search
     
+    NSLog(@"End Beam Search");
+    
     //If complete captions is empty, use partial captions
     if ([complete_captions size]==0){
         complete_captions = partial_captions;
@@ -331,17 +352,28 @@ vocabulary *vocab;
     
     NSMutableArray<caption *> *top_sentences = [complete_captions extract:true]; //:true];
     NSMutableArray *top_sentence = top_sentences[0]->sentence;
+    
+    
 
     NSMutableString *final_caption = [@"" mutableCopy];
+    double score = exp(top_sentences[0]->logprob);
+    
+    //Express degrees of uncertainty
+    if (score < 0.0001) [final_caption appendString:@"not so clear, this might be "];
+    else if (score < 0.001) [final_caption appendString:@"this may be "];
+    
     for (int i = 1; i < [top_sentence count]; i++){
         NSMutableString *word = [[vocab id_to_word:[top_sentence[i] intValue]] mutableCopy];
         if(![word isEqualToString:@"."]&&![word isEqualToString:@"</S>"]){
             NSString *space = i < [top_sentence count]-2 ? @" " : @"";
             [word appendString:space];
+            if ([top_sentence[i] intValue] == 10 && [top_sentence[i-1] intValue] != 26)[final_caption appendString:@"that "];
             [final_caption appendString:[word lowercaseString]];
         }
     
     }
+    
+    //[final_caption appendString:[@(exp(top_sentences[0]->logprob)) stringValue]];
 
     //Clearing captions and tensors from memory
     

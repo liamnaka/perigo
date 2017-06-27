@@ -104,15 +104,15 @@
     return copy;*/
     if (sort){
         
-        NSMutableArray *tmp =  [[[queue toArray] sortedArrayUsingComparator:^(caption* a, caption* b) {
+        NSMutableArray *tmp =   [[NSMutableArray alloc] initWithArray: [[queue toArray] sortedArrayUsingComparator:^(caption* a, caption* b) {
             return [[NSNumber numberWithDouble:b->score] compare:[NSNumber numberWithDouble:a->score]];
-        }]mutableCopy]; //This is working
+        }]]; //This is working
         [queue clear];
         return tmp;
         
     }
     else{
-        NSMutableArray *tmp = [queue toArray];
+        NSMutableArray *tmp =  [[NSMutableArray alloc] initWithArray: [queue toArray]];
         [queue clear];
         return tmp;
     }

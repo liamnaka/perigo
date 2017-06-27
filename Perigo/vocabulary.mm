@@ -32,11 +32,22 @@ NSMutableDictionary *_vocab = [NSMutableDictionary dictionary];
     std::ifstream t;
     t.open([labels_path UTF8String]);
     std::string line;
-    std::string delimiter = "' ";
+    //std::string delimiter = "' ";
     while (t) {
         std::getline(t, line);
+        std::string delimiter = line.substr(1,1) + " ";
         auto pos = line.find(delimiter);
         line = line.substr(2,pos-2);
+        //Avoid misgendering
+        if (line == "man" || line == "woman"){
+            line = "person";
+        }
+        if (line == "boy" || line == "girl"){
+            line = "child";
+        }
+        //if (line == "is"){
+        //    line = "that is";
+        //}
         [reverse_vocab addObject:[NSString stringWithCString:line.c_str() encoding: [NSString defaultCStringEncoding]]];
     }
     t.close();
@@ -51,6 +62,10 @@ NSMutableDictionary *_vocab = [NSMutableDictionary dictionary];
     NSLog(@"%@", reverse_vocab[0]);
     NSLog(@"%@", reverse_vocab[2]);
     NSLog(@"%@", reverse_vocab[11518]);
+    NSLog(@"%@", reverse_vocab[128]);
+    NSLog(@"%@", reverse_vocab[11519]);
+    NSLog(@"%@", reverse_vocab[455]);
+    NSLog(@"%@", reverse_vocab[5411]);
     NSLog(@"%@", _vocab[reverse_vocab[0]]);
     NSLog(@"%@", _vocab[reverse_vocab[2]]);
     NSLog(@"%@", _vocab[@"trudging"]);
@@ -58,7 +73,7 @@ NSMutableDictionary *_vocab = [NSMutableDictionary dictionary];
     //Start and end IDs specific to the pre-trained model
     start_id = 2;
     end_id = 1;
-    unk_id = 11518;
+    unk_id = 11519;
     return self;
 };
 - (int)word_to_id:(NSString*)word{
