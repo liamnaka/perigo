@@ -46,7 +46,8 @@ class ImageGalleryViewCell: UICollectionViewCell {
             contentView.addSubview(view)
         }
         
-        isAccessibilityElement = true
+        isUserInteractionEnabled = false
+        isAccessibilityElement = false
         accessibilityTraits = UIAccessibilityTraitAllowsDirectInteraction
         accessibilityLabel = ""
         //accesibility

@@ -53,6 +53,7 @@
 		0CEF9A831F01C5B600644B77 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A7C1F01C5B600644B77 /* Storage.swift */; };
 		0CEF9A841F01C5B600644B77 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A7D1F01C5B600644B77 /* Structure.swift */; };
 		0CEF9A871F01C6AC00644B77 /* facenet.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF9A861F01C6AC00644B77 /* facenet.mm */; };
+		0CFA13FD1F0F28A60011267C /* images.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA13FC1F0F28A60011267C /* images.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,8 @@
 		0CEF9A7D1F01C5B600644B77 /* Structure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Structure.swift; path = SwiftAI/Structure.swift; sourceTree = "<group>"; };
 		0CEF9A851F01C6AC00644B77 /* facenet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facenet.h; sourceTree = "<group>"; };
 		0CEF9A861F01C6AC00644B77 /* facenet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = facenet.mm; sourceTree = "<group>"; };
+		0CFA13FC1F0F28A60011267C /* images.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = images.m; sourceTree = "<group>"; };
+		0CFA13FE1F0F28C20011267C /* images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = images.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C27F05B1F1001A30091D983 /* Image Processing */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA13FC1F0F28A60011267C /* images.m */,
+				0CFA13FE1F0F28C20011267C /* images.h */,
+			);
+			name = "Image Processing";
+			sourceTree = "<group>";
+		};
+		0C27F05C1F1001BA0091D983 /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				0C85E6521EE6023000CF3E4D /* ImageNet */,
+				0CEF9A761F01C5A000644B77 /* SwiftAI */,
+				0C0F7F791F00CE0C00065C58 /* Faces.swift */,
+				0CE6E4BD1F0058D1007A703B /* CocoHelper.swift */,
+				0CE6E4BA1F005607007A703B /* coco.h */,
+				0CE6E4BB1F005607007A703B /* coco.mm */,
+				0CEF9A851F01C6AC00644B77 /* facenet.h */,
+				0CEF9A861F01C6AC00644B77 /* facenet.mm */,
+			);
+			name = Experimental;
+			sourceTree = "<group>";
+		};
 		0C85E4D51EE6021900CF3E4D /* Parameters */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,24 +273,18 @@
 			children = (
 				0CE292A41E1F75BA00D5A1A7 /* AppDelegate.swift */,
 				0CE292A61E1F75BA00D5A1A7 /* ViewController.swift */,
-				0C0F7F791F00CE0C00065C58 /* Faces.swift */,
-				0CE6E4BD1F0058D1007A703B /* CocoHelper.swift */,
-				0CE292A81E1F75BA00D5A1A7 /* Main.storyboard */,
 				0CE293011E1F92A500D5A1A7 /* beam.h */,
 				0CE292FF1E1F91C900D5A1A7 /* beam.mm */,
-				0CEF9A761F01C5A000644B77 /* SwiftAI */,
-				0CE6E4BA1F005607007A703B /* coco.h */,
-				0CE6E4BB1F005607007A703B /* coco.mm */,
-				0CEF9A851F01C6AC00644B77 /* facenet.h */,
-				0CEF9A861F01C6AC00644B77 /* facenet.mm */,
 				0C9CE77F1E50B88800AD3B67 /* Beam */,
 				0CC6071F1EBE790E00CB0A8A /* Image Picker */,
+				0C27F05B1F1001A30091D983 /* Image Processing */,
+				0C27F05C1F1001BA0091D983 /* Experimental */,
+				0CE292E91E1F781700D5A1A7 /* Network */,
 				0C568AF11E219584004CE94B /* vision.h */,
 				0C568AF21E219584004CE94B /* vision.mm */,
-				0C85E6521EE6023000CF3E4D /* ImageNet */,
-				0CE292E91E1F781700D5A1A7 /* Network */,
 				0CE292AB1E1F75BA00D5A1A7 /* Assets.xcassets */,
 				0CE292AD1E1F75BA00D5A1A7 /* LaunchScreen.storyboard */,
+				0CE292A81E1F75BA00D5A1A7 /* Main.storyboard */,
 				0CE292C31E1F75BA00D5A1A7 /* PerigoUITests */,
 				0CE292B01E1F75BA00D5A1A7 /* Info.plist */,
 				0CE292FB1E1F8E2700D5A1A7 /* Perigo-Bridging-Header.h */,
@@ -486,6 +507,7 @@
 				0CC6071B1EBE790700CB0A8A /* ImageGalleryView.swift in Sources */,
 				0CC6071E1EBE790700CB0A8A /* VideoInfoView.swift in Sources */,
 				0CC607291EBE7D2500CB0A8A /* ConstraintsSetup.swift in Sources */,
+				0CFA13FD1F0F28A60011267C /* images.m in Sources */,
 				0CC6071A1EBE790700CB0A8A /* ImageGalleryLayout.swift in Sources */,
 				0CD9042B1E5018D400589BD7 /* vocabulary.mm in Sources */,
 				0CC6071C1EBE790700CB0A8A /* ImageGalleryViewCell.swift in Sources */,
@@ -593,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -636,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -653,9 +675,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Q6Q9Q8CYJ4;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -667,6 +690,7 @@
 					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src/",
 				);
 				INFOPLIST_FILE = Perigo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/lib",
@@ -678,10 +702,12 @@
 					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = perigo.seemer;
+				PRODUCT_BUNDLE_IDENTIFIER = sight.perigo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Perigo/Perigo-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -695,10 +721,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Q6Q9Q8CYJ4;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
@@ -709,6 +736,7 @@
 					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src/",
 				);
 				INFOPLIST_FILE = Perigo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/lib",
@@ -720,8 +748,10 @@
 					"$(SRCROOT)/../tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = perigo.seemer;
+				PRODUCT_BUNDLE_IDENTIFIER = sight.perigo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Perigo/Perigo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

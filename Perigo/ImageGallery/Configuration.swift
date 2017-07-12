@@ -7,7 +7,7 @@ public struct Configuration {
     public var backgroundColor = UIColor(red: 0.15, green: 0.19, blue: 0.24, alpha: 1)
     public var gallerySeparatorColor = UIColor.black.withAlphaComponent(0.6)
     public var mainColor = UIColor.black// UIColor(red: 0.09, green: 0.11, blue: 0.13, alpha: 1)
-    public var noImagesColor = UIColor(red: 0.86, green: 0.86, blue: 0.86, alpha: 1)
+    public var noImagesColor = UIColor.white
     public var noCameraColor = UIColor(red: 0.86, green: 0.86, blue: 0.86, alpha: 1)
     public var settingsColor = UIColor.white
     public var bottomContainerColor = UIColor(red: 0.09, green: 0.11, blue: 0.13, alpha: 1)
@@ -26,7 +26,7 @@ public struct Configuration {
     public var OKButtonTitle = "OK"
     public var cancelButtonTitle = "Cancel"
     public var doneButtonTitle = "Done"
-    public var noImagesTitle = ""
+    public var noImagesTitle = "No Photos"
     public var noCameraTitle = "Camera is not available"
     public var settingsTitle = "Settings"
     public var requestPermissionTitle = "Permission denied"

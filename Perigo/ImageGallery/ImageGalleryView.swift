@@ -116,7 +116,8 @@ open class ImageGalleryView: UIView {
         label.font = self.configuration.noImagesFont
         label.textColor = self.configuration.noImagesColor
         label.text = self.configuration.noImagesTitle
-        label.alpha = 0
+        label.isUserInteractionEnabled = false
+        label.alpha = 0.0
         label.sizeToFit()
         self.addSubview(label)
         
@@ -165,7 +166,7 @@ open class ImageGalleryView: UIView {
         //collectionView.isPagingEnabled = true
         
         collectionView.bounces = false
-        
+        collectionView.clipsToBounds = false
         
         collectionView.isAccessibilityElement = false
         //collectionView.accessibilityLabel = "Tap once to describe your photos. Scroll sideways for more."
@@ -179,6 +180,8 @@ open class ImageGalleryView: UIView {
         //collectionView.contentInset = UIEdgeInsetsMake(0, inset, 0, inset)
         
         //topSeparator.addSubview(configuration.indicatorView)
+        
+       
         
         imagesBeforeLoading = 0
         fetchPhotos()
@@ -199,10 +202,15 @@ open class ImageGalleryView: UIView {
         let totalHeight = frame.height
         frame.size.width = totalWidth
         
+        
+        
         collectionView.frame = CGRect(x: 0, y: 0, width: totalWidth, height: frame.height)
         collectionSize = CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
         
-        
+        let logoWidth : CGFloat = (totalWidth-totalHeight)/4
+        let logo = UIImageView(image: UIImage(named: "CircleIcon"))
+        logo.frame = CGRect(x: logoWidth/2, y: (totalHeight-logoWidth)/2, width: logoWidth, height: logoWidth)
+        collectionView.addSubview(logo)
         
         
         collectionView.reloadData()
@@ -212,12 +220,14 @@ open class ImageGalleryView: UIView {
         let height = bounds.height
         let threshold = Dimensions.galleryBarHeight * 2
         
+        self.noImagesLabel.center = CGPoint(x: self.bounds.width / 2, y: height / 2)
+        
         UIView.animate(withDuration: 0.25, animations: {
             if threshold > height || self.collectionView.alpha != 0 {
                 self.noImagesLabel.alpha = 0
             } else {
-                self.noImagesLabel.center = CGPoint(x: self.bounds.width / 2, y: height / 2)
-                self.noImagesLabel.alpha = (height > threshold) ? 1 : (height - Dimensions.galleryBarHeight) / threshold
+                
+                self.noImagesLabel.alpha = 1//(height > threshold) ? 1 : (height - Dimensions.galleryBarHeight) / threshold
             }
         })
     }
@@ -313,8 +323,23 @@ extension ImageGalleryView: UICollectionViewDelegate {
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if last != getCenter() {
+            
+            /*let url = URL(fileURLWithPath: "/System/Library/Audio/UISounds/Tock.caf")
+            do{
+                let sound = try AVAudioPlayer(contentsOf: url)
+                sound.play()
+            }
+            catch{
+                
+            }*/
+            //var flag : UInt32 = 0
+            //var audio : UInt32 = 1104
+            
+           
+            //AudioServicesSetProperty(kAudioServicesPropertyIsUISound, 0, &audio, 0, &flag)
             AudioServicesPlaySystemSound(1104)
             last = getCenter()
+            ViewController.sharedInstance?.setPointers(cam: nil, library: false)
         }
         
         
@@ -363,6 +388,7 @@ extension ImageGalleryView: UICollectionViewDelegate {
             
         }
     }
+    
     
     /*public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
      guard let cell = collectionView.cellForItem(at: indexPath) as? ImageGalleryViewCell else { return }

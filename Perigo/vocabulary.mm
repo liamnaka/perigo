@@ -42,9 +42,28 @@ NSMutableDictionary *_vocab = [NSMutableDictionary dictionary];
         if (line == "man" || line == "woman"){
             line = "person";
         }
+        if (line == "lady" || line == "guy"){
+            line = "person";
+        }
+        if (line == "men" || line == "women"){
+            line = "people";
+        }
         if (line == "boy" || line == "girl"){
             line = "child";
         }
+        if (line == "boys" || line == "girls"){
+            line = "children";
+        }
+        if (line == "male" || line == "female"){
+            line = "";
+        }
+        if (line == "her" || line == "his"){
+            line = "their";
+        }
+        if (line == "herself" || line == "himself"){
+            line = "themself";
+        }
+        
         //if (line == "is"){
         //    line = "that is";
         //}
