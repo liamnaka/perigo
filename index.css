@@ -1,0 +1,121 @@
+body {
+   background-color: #ff3040;
+   background-size: cover;
+   font-smoothing: antialiased;
+   text-align: center;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s; /* Firefox < 16 */
+    -ms-animation: fadein 1.5s; /* Internet Explorer */
+   -o-animation: fadein 1.5s; /* Opera < 12.1 */
+    animation: fadein 1.5s;
+}
+
+html, body {
+margin:0;
+padding:0;
+}
+
+p {
+  margin:2em;
+  line-height:1.5em;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(10em); }
+    to   { opacity: 1; transform: translateY(0em);}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; transform: translateY(10em); }
+    to   { opacity: 1; transform: translateY(0em);}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; transform: translateY(10em); }
+    to   { opacity: 1; transform: translateY(0em);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; transform: translateY(10em); }
+    to   { opacity: 1; transform: translateY(0em);}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; transform: translateY(10em); }
+    to   { opacity: 1; transform: translateY(0em);}
+}
+
+#prof {
+   height: 15em;
+   width: 15em;
+   margin-top: 5%;
+   border-radius: 50%;
+   border: .8em solid white;
+}
+
+#banner {
+  width: 100vw;
+  border-top: .5em solid white;
+  border-bottom: .5em solid white;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+#name {
+   color: white;
+   position: relative;
+   font-family: Futura, Helvetica, sans-serif;
+   font-size: 50px;
+   margin-top: 3%;
+}
+
+.bold {
+   font-family: Futura, Helvetica, sans-serif;
+}
+
+#bio {
+   line-height: 25px;
+   color: white;
+   margin-top: 0%;
+   position: relative;
+   font-family: Futura, Helvetica, sans-serif;
+   font-size: 23px;
+}
+
+#footer {
+   line-height: 25px;
+   color: white;
+   margin-top: 2%;
+   position: relative;
+   font-family: Futura, Helvetica, sans-serif;
+   font-size: 16px;
+}
+
+a:visited {
+   color: #ddd;
+}
+
+a:hover {
+   color: #aaa;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  position: relative;
+  margin-top: 0%;
+}
