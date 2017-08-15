@@ -1,3 +1,5 @@
+//Made by Hyper in Oslo -> https://github.com/hyperoslo/ImagePicker
+
 import UIKit
 
 class VideoInfoView: UIView {

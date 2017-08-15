@@ -1,3 +1,5 @@
+//Made by Hyper in Oslo -> https://github.com/hyperoslo/ImagePicker
+
 import UIKit
 
 extension ImageGalleryView: UICollectionViewDataSource {
@@ -21,7 +23,7 @@ extension ImageGalleryView: UICollectionViewDataSource {
         
         AssetManager.resolveAsset(asset, size: CGSize(width: 160, height: 240)) { image in
             if let image = image {
-                cell.configureCell(image)
+                cell.configureCell(image, asset: asset)
                 
                 if (indexPath as NSIndexPath).row == 0 && self.shouldTransform {
                     cell.transform = CGAffineTransform(scaleX: 0, y: 0)

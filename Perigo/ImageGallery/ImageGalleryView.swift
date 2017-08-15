@@ -1,3 +1,5 @@
+//Made by Hyper in Oslo -> https://github.com/hyperoslo/ImagePicker
+
 import UIKit
 import Photos
 fileprivate func < <T: Comparable>(lhs: T?, rhs: T?) -> Bool {

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0C0F7F7A1F00CE0C00065C58 /* Faces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F7F791F00CE0C00065C58 /* Faces.swift */; };
+		0C2A2F0C1F42A4C100D54542 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A2F0B1F42A4C100D54542 /* extensions.swift */; };
+		0C2A2F0E1F42A58E00D54542 /* initializations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A2F0D1F42A58E00D54542 /* initializations.swift */; };
+		0C2A2F101F42AB0C00D54542 /* date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A2F0F1F42AB0C00D54542 /* date.swift */; };
+		0C2A2F131F42ACBA00D54542 /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A2F121F42ACBA00D54542 /* camera.swift */; };
+		0C2A2F151F42AD8B00D54542 /* speach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A2F141F42AD8B00D54542 /* speach.swift */; };
+		0C2A2F171F42AE1500D54542 /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A2F161F42AE1500D54542 /* location.swift */; };
+		0C2A2F191F42B74500D54542 /* interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A2F181F42B74500D54542 /* interface.swift */; };
+		0C2A2F1B1F42B83900D54542 /* inference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A2F1A1F42B83900D54542 /* inference.swift */; };
 		0C2E32B01E5FCA1A0059E169 /* queue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E32AF1E5FCA1A0059E169 /* queue.mm */; };
 		0C35066C1E5CE00500643C99 /* perigo_mapped.pb in Resources */ = {isa = PBXBuildFile; fileRef = 0C35066B1E5CDEC200643C99 /* perigo_mapped.pb */; };
 		0C568AF31E219584004CE94B /* vision.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C568AF21E219584004CE94B /* vision.mm */; };
@@ -75,6 +83,14 @@
 
 /* Begin PBXFileReference section */
 		0C0F7F791F00CE0C00065C58 /* Faces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faces.swift; sourceTree = "<group>"; };
+		0C2A2F0B1F42A4C100D54542 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		0C2A2F0D1F42A58E00D54542 /* initializations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = initializations.swift; sourceTree = "<group>"; };
+		0C2A2F0F1F42AB0C00D54542 /* date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = date.swift; sourceTree = "<group>"; };
+		0C2A2F121F42ACBA00D54542 /* camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
+		0C2A2F141F42AD8B00D54542 /* speach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speach.swift; sourceTree = "<group>"; };
+		0C2A2F161F42AE1500D54542 /* location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = location.swift; sourceTree = "<group>"; };
+		0C2A2F181F42B74500D54542 /* interface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = interface.swift; sourceTree = "<group>"; };
+		0C2A2F1A1F42B83900D54542 /* inference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inference.swift; sourceTree = "<group>"; };
 		0C2E32AE1E5FCA1A0059E169 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 		0C2E32AF1E5FCA1A0059E169 /* queue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = queue.mm; sourceTree = "<group>"; };
 		0C35066B1E5CDEC200643C99 /* perigo_mapped.pb */ = {isa = PBXFileReference; lastKnownFileType = file; name = perigo_mapped.pb; path = data/perigo_mapped.pb; sourceTree = "<group>"; };
@@ -195,6 +211,20 @@
 			name = Experimental;
 			sourceTree = "<group>";
 		};
+		0C2A2F111F42AB9300D54542 /* View Controller Logic */ = {
+			isa = PBXGroup;
+			children = (
+				0C2A2F0D1F42A58E00D54542 /* initializations.swift */,
+				0C2A2F1A1F42B83900D54542 /* inference.swift */,
+				0C2A2F0F1F42AB0C00D54542 /* date.swift */,
+				0C2A2F161F42AE1500D54542 /* location.swift */,
+				0C2A2F121F42ACBA00D54542 /* camera.swift */,
+				0C2A2F141F42AD8B00D54542 /* speach.swift */,
+				0C2A2F181F42B74500D54542 /* interface.swift */,
+			);
+			name = "View Controller Logic";
+			sourceTree = "<group>";
+		};
 		0C85E4D51EE6021900CF3E4D /* Parameters */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +242,7 @@
 			name = ImageNet;
 			sourceTree = "<group>";
 		};
-		0C9CE77F1E50B88800AD3B67 /* Beam */ = {
+		0C9CE77F1E50B88800AD3B67 /* Beam Search */ = {
 			isa = PBXGroup;
 			children = (
 				0CD9042C1E5018FE00589BD7 /* caption.h */,
@@ -226,7 +256,7 @@
 				0CE292FC1E1F8E2700D5A1A7 /* tensorflow_utils.h */,
 				0CE292FD1E1F8E2700D5A1A7 /* tensorflow_utils.mm */,
 			);
-			name = Beam;
+			name = "Beam Search";
 			sourceTree = "<group>";
 		};
 		0CC6071F1EBE790E00CB0A8A /* Image Picker */ = {
@@ -275,13 +305,15 @@
 				0CE292A61E1F75BA00D5A1A7 /* ViewController.swift */,
 				0CE293011E1F92A500D5A1A7 /* beam.h */,
 				0CE292FF1E1F91C900D5A1A7 /* beam.mm */,
-				0C9CE77F1E50B88800AD3B67 /* Beam */,
+				0C9CE77F1E50B88800AD3B67 /* Beam Search */,
+				0C2A2F111F42AB9300D54542 /* View Controller Logic */,
 				0CC6071F1EBE790E00CB0A8A /* Image Picker */,
 				0C27F05B1F1001A30091D983 /* Image Processing */,
 				0C27F05C1F1001BA0091D983 /* Experimental */,
 				0CE292E91E1F781700D5A1A7 /* Network */,
 				0C568AF11E219584004CE94B /* vision.h */,
 				0C568AF21E219584004CE94B /* vision.mm */,
+				0C2A2F0B1F42A4C100D54542 /* extensions.swift */,
 				0CE292AB1E1F75BA00D5A1A7 /* Assets.xcassets */,
 				0CE292AD1E1F75BA00D5A1A7 /* LaunchScreen.storyboard */,
 				0CE292A81E1F75BA00D5A1A7 /* Main.storyboard */,
@@ -489,11 +521,13 @@
 				0CEF9A821F01C5B600644B77 /* NeuralNet.swift in Sources */,
 				0CC6071D1EBE790700CB0A8A /* ImageGalleryViewDataSource.swift in Sources */,
 				0CE6E4BE1F0058D1007A703B /* CocoHelper.swift in Sources */,
+				0C2A2F1B1F42B83900D54542 /* inference.swift in Sources */,
 				0C0F7F7A1F00CE0C00065C58 /* Faces.swift in Sources */,
 				0CC6072F1EBE838B00CB0A8A /* StackView.swift in Sources */,
 				0C2E32B01E5FCA1A0059E169 /* queue.mm in Sources */,
 				0CE6E4BC1F005607007A703B /* coco.mm in Sources */,
 				0CC607211EBE794B00CB0A8A /* Helper.swift in Sources */,
+				0C2A2F191F42B74500D54542 /* interface.swift in Sources */,
 				0CEF9A841F01C5B600644B77 /* Structure.swift in Sources */,
 				0CEF9A7E1F01C5B600644B77 /* Activation.swift in Sources */,
 				0C66E74D1E527EAE00738EDB /* topn.mm in Sources */,
@@ -502,13 +536,18 @@
 				0CE292FE1E1F8E2700D5A1A7 /* tensorflow_utils.mm in Sources */,
 				0CC607231EBE797E00CB0A8A /* Configuration.swift in Sources */,
 				0C85E6551EE6024B00CF3E4D /* Inception3Net.swift in Sources */,
+				0C2A2F0E1F42A58E00D54542 /* initializations.swift in Sources */,
+				0C2A2F101F42AB0C00D54542 /* date.swift in Sources */,
 				0CEF9A871F01C6AC00644B77 /* facenet.mm in Sources */,
+				0C2A2F151F42AD8B00D54542 /* speach.swift in Sources */,
 				0CEF9A7F1F01C5B600644B77 /* Cache.swift in Sources */,
 				0CC6071B1EBE790700CB0A8A /* ImageGalleryView.swift in Sources */,
 				0CC6071E1EBE790700CB0A8A /* VideoInfoView.swift in Sources */,
 				0CC607291EBE7D2500CB0A8A /* ConstraintsSetup.swift in Sources */,
+				0C2A2F171F42AE1500D54542 /* location.swift in Sources */,
 				0CFA13FD1F0F28A60011267C /* images.m in Sources */,
 				0CC6071A1EBE790700CB0A8A /* ImageGalleryLayout.swift in Sources */,
+				0C2A2F0C1F42A4C100D54542 /* extensions.swift in Sources */,
 				0CD9042B1E5018D400589BD7 /* vocabulary.mm in Sources */,
 				0CC6071C1EBE790700CB0A8A /* ImageGalleryViewCell.swift in Sources */,
 				0CE293001E1F91C900D5A1A7 /* beam.mm in Sources */,
@@ -519,6 +558,7 @@
 				0C568AF31E219584004CE94B /* vision.mm in Sources */,
 				0CC6072E1EBE838B00CB0A8A /* ButtonPicker.swift in Sources */,
 				0CEF9A831F01C5B600644B77 /* Storage.swift in Sources */,
+				0C2A2F131F42ACBA00D54542 /* camera.swift in Sources */,
 				0CEF9A811F01C5B600644B77 /* Error.swift in Sources */,
 				0C85E6561EE6024B00CF3E4D /* SlimMPSCNN.swift in Sources */,
 			);
@@ -709,6 +749,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Perigo/Perigo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -754,6 +795,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Perigo/Perigo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

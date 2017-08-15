@@ -5,7 +5,7 @@
 	Abstract:
 	This is the main inception network coded
  */
-
+/*
 
 import Foundation
 import UIKit
@@ -3018,3 +3018,5 @@ class Inception3Net{
                      "dumbbell"]
 
 }
+ 
+ */

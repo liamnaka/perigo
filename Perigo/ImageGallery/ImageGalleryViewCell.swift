@@ -1,4 +1,8 @@
+//Made by Hyper in Oslo -> https://github.com/hyperoslo/ImagePicker
+
 import UIKit
+import CoreLocation
+import Photos
 
 class ImageGalleryViewCell: UICollectionViewCell {
     
@@ -6,6 +10,8 @@ class ImageGalleryViewCell: UICollectionViewCell {
     lazy var selectedImageView = UIImageView()
     private var videoInfoView: VideoInfoView
     lazy var blurView = UIVisualEffectView()
+    var loc : CLLocation? = nil
+    var photo : PHAsset? = nil
     
     private let videoInfoBarHeight: CGFloat = 15
     var duration: TimeInterval? {
@@ -46,10 +52,21 @@ class ImageGalleryViewCell: UICollectionViewCell {
             contentView.addSubview(view)
         }
         
-        isUserInteractionEnabled = false
-        isAccessibilityElement = false
-        accessibilityTraits = UIAccessibilityTraitAllowsDirectInteraction
-        accessibilityLabel = ""
+        //isUserInteractionEnabled = false
+        isAccessibilityElement = true
+        accessibilityTraits = UIAccessibilityTraitButton
+        
+        if UIAccessibilityIsVoiceOverRunning(){
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.scan))
+            self.addGestureRecognizer(tap)
+        }
+        
+        
+        //imageView.isAccessibilityElement = true
+        //accessibilityLabel = imageView.accessibilityLabel
+        //accessibilityTraits = UIAccessibilityTraitImage
+        //accessibilityTraits = UIAccessibilityTraitAllowsDirectInteraction
+        
         //accesibility
         
         
@@ -57,14 +74,47 @@ class ImageGalleryViewCell: UICollectionViewCell {
         setupConstraints()
     }
     
+    
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func scan(){
+        blur()
+        let options = PHImageRequestOptions()
+        options.deliveryMode = .highQualityFormat
+        options.isSynchronous = false
+        options.version = .original
+        let manager = PHImageManager.default()
+        manager.requestImageData(for: photo!, options: options, resultHandler: //Start photo asset request
+            { data, _, _, _ in
+                if let data = data {
+                    let pic = UIImage(data: data)!
+                    ViewController.sharedInstance?.locationScan(image: pic, date: Date(), location: self.loc)
+                    
+            }
+        })
+        
+    }
+    
     // MARK: - Configuration
     
-    func configureCell(_ image: UIImage) {
+    func configureCell(_ image: UIImage, asset: PHAsset) {
         imageView.image = image
+        if UIAccessibilityIsVoiceOverRunning() {
+           
+            if let caption = ViewController.sharedInstance?.getDateSummary(date: asset.creationDate ?? Date.distantPast, context: false) {
+                accessibilityLabel = "Image " + caption
+            }
+            loc = asset.location
+            photo = asset
+            
+        }
+        
+        //self.accessibilityLabel = imageView.accessibilityLabel
+        
+        //accessibilityLabel = image.accessibilityLabel
     }
 }
 

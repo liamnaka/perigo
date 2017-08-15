@@ -5,7 +5,7 @@
 	Abstract:
 	This file describes slimmer routines to create some common MPSCNNFunctions, it is useful especially to fetch network parameters from .dat files
  */
-
+/*
 import Foundation
 import MetalPerformanceShaders
 
@@ -224,4 +224,4 @@ class SlimMPSCNNFullyConnected: MPSCNNFullyConnected{
         
     }
     
-}
+}*/
