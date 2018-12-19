@@ -55,6 +55,7 @@ p {
 #prof {
    height: 15em;
    width: 15em;
+   max-width: 75vw;
    margin-top: 5%;
    border-radius: 50%;
    border: .8em solid white;
@@ -76,7 +77,8 @@ p {
 
 #name {
    color: white;
-   position: relative;
+   margin-left: 10vw;
+   margin-right: 10vw;
    font-family: Futura, Helvetica, sans-serif;
    font-size: 50px;
    margin-top: 3%;
